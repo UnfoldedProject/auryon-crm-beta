@@ -8,9 +8,7 @@ import {
   Plus,
   ChevronRight,
   Calendar,
-  Users,
   FileText,
-  Home,
   Zap,
   CheckSquare,
   User,
@@ -19,6 +17,7 @@ import {
   Slack,
 } from "lucide-react"
 import { AuryonLogo } from "@/components/auryon-logo"
+import { SidebarNavigation } from "@/components/sidebar-navigation"
 
 export default function Dashboard() {
   const [greeting, setGreeting] = useState(() => {
@@ -71,46 +70,7 @@ export default function Dashboard() {
 
       <div className="flex">
         {/* Sidebar */}
-        <aside className="w-64 bg-white border-r min-h-screen p-6">
-          <nav className="space-y-4">
-            <a href="#" className="flex items-center text-green-600 font-medium">
-              <Home className="h-5 w-5 mr-3" />
-              Dashboard
-            </a>
-            <a href="#" className="flex items-center text-gray-700 hover:text-green-600">
-              <User className="h-5 w-5 mr-3" />
-              Leads
-            </a>
-            <a href="#" className="flex items-center text-gray-700 hover:text-green-600">
-              <FileText className="h-5 w-5 mr-3" />
-              Forms
-            </a>
-            <a href="#" className="flex items-center text-gray-700 hover:text-green-600">
-              <Zap className="h-5 w-5 mr-3" />
-              Automation
-            </a>
-            <a href="#" className="flex items-center text-gray-700 hover:text-green-600">
-              <CheckSquare className="h-5 w-5 mr-3" />
-              Tasks / Pipeline
-            </a>
-            <a href="#" className="flex items-center text-gray-700 hover:text-green-600">
-              <Users className="h-5 w-5 mr-3" />
-              Clients
-            </a>
-            <a href="#" className="flex items-center text-gray-700 hover:text-green-600">
-              <Calendar className="h-5 w-5 mr-3" />
-              Calendar
-            </a>
-            <a href="#" className="flex items-center text-gray-700 hover:text-green-600">
-              <Users className="h-5 w-5 mr-3" />
-              Team
-            </a>
-            <a href="#" className="flex items-center text-gray-700 hover:text-green-600">
-              <Settings className="h-5 w-5 mr-3" />
-              Settings
-            </a>
-          </nav>
-        </aside>
+        <SidebarNavigation />
 
         {/* Main Dashboard Content */}
         <main className="flex-1 p-8">
