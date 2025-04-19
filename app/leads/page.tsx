@@ -4,7 +4,6 @@ import { useState } from "react"
 import Link from "next/link"
 import { Search, Plus, ChevronDown, Filter } from "lucide-react"
 import { AuryonLogo } from "@/components/auryon-logo"
-import { SidebarNavigation } from "@/components/sidebar-navigation"
 
 // Sample lead data
 const leads = [
@@ -116,7 +115,42 @@ export default function LeadsPage() {
 
       <div className="flex">
         {/* Sidebar */}
-        <SidebarNavigation />
+        <aside className="w-64 bg-white border-r min-h-screen p-6">
+          <nav className="space-y-4">
+            <Link href="/dashboard" className="flex items-center text-gray-700 hover:text-green-600">
+              <span className="mr-3">🏠</span>
+              Dashboard
+            </Link>
+            <Link href="/leads" className="flex items-center text-green-600 font-medium">
+              <span className="mr-3">👥</span>
+              Leads
+            </Link>
+            <Link href="/forms" className="flex items-center text-gray-700 hover:text-green-600">
+              <span className="mr-3">📝</span>
+              Forms
+            </Link>
+            <Link href="/automations" className="flex items-center text-gray-700 hover:text-green-600">
+              <span className="mr-3">⚡</span>
+              Automation
+            </Link>
+            <Link href="/tasks" className="flex items-center text-gray-700 hover:text-green-600">
+              <span className="mr-3">✅</span>
+              Tasks
+            </Link>
+            <Link href="/calendar" className="flex items-center text-gray-700 hover:text-green-600">
+              <span className="mr-3">📅</span>
+              Calendar
+            </Link>
+            <Link href="/clients" className="flex items-center text-gray-700 hover:text-green-600">
+              <span className="mr-3">🤝</span>
+              Clients
+            </Link>
+            <Link href="/settings" className="flex items-center text-gray-700 hover:text-green-600">
+              <span className="mr-3">⚙️</span>
+              Settings
+            </Link>
+          </nav>
+        </aside>
 
         {/* Main Content */}
         <main className="flex-1 p-8">

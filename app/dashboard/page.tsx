@@ -8,7 +8,9 @@ import {
   Plus,
   ChevronRight,
   Calendar,
+  Users,
   FileText,
+  Home,
   Zap,
   CheckSquare,
   User,
@@ -17,7 +19,7 @@ import {
   Slack,
 } from "lucide-react"
 import { AuryonLogo } from "@/components/auryon-logo"
-import { SidebarNavigation } from "@/components/sidebar-navigation"
+import Link from "next/link"
 
 export default function Dashboard() {
   const [greeting, setGreeting] = useState(() => {
@@ -56,9 +58,11 @@ export default function Dashboard() {
           <button className="text-gray-600 hover:text-gray-900">
             <Settings className="h-5 w-5" />
           </button>
-          <button className="text-gray-600 hover:text-gray-900">
-            <LogOut className="h-5 w-5" />
-          </button>
+          <form action="/api/auth/logout" method="post">
+            <button type="submit" className="text-gray-600 hover:text-gray-900">
+              <LogOut className="h-5 w-5" />
+            </button>
+          </form>
           <div className="flex items-center space-x-3">
             <span className="text-sm font-medium">Sean Williams</span>
             <div className="h-10 w-10 rounded-full bg-gradient-to-r from-[#6EE7B7] to-[#FCD34D] flex items-center justify-center text-white font-bold">
@@ -70,7 +74,46 @@ export default function Dashboard() {
 
       <div className="flex">
         {/* Sidebar */}
-        <SidebarNavigation />
+        <aside className="w-64 bg-white border-r min-h-screen p-6">
+          <nav className="space-y-4">
+            <Link href="/dashboard" className="flex items-center text-green-600 font-medium">
+              <Home className="h-5 w-5 mr-3" />
+              Dashboard
+            </Link>
+            <Link href="/leads" className="flex items-center text-gray-700 hover:text-green-600">
+              <User className="h-5 w-5 mr-3" />
+              Leads
+            </Link>
+            <Link href="/forms" className="flex items-center text-gray-700 hover:text-green-600">
+              <FileText className="h-5 w-5 mr-3" />
+              Forms
+            </Link>
+            <Link href="/automations" className="flex items-center text-gray-700 hover:text-green-600">
+              <Zap className="h-5 w-5 mr-3" />
+              Automation
+            </Link>
+            <Link href="/tasks" className="flex items-center text-gray-700 hover:text-green-600">
+              <CheckSquare className="h-5 w-5 mr-3" />
+              Tasks / Pipeline
+            </Link>
+            <Link href="/clients" className="flex items-center text-gray-700 hover:text-green-600">
+              <Users className="h-5 w-5 mr-3" />
+              Clients
+            </Link>
+            <Link href="/calendar" className="flex items-center text-gray-700 hover:text-green-600">
+              <Calendar className="h-5 w-5 mr-3" />
+              Calendar
+            </Link>
+            <Link href="/team" className="flex items-center text-gray-700 hover:text-green-600">
+              <Users className="h-5 w-5 mr-3" />
+              Team
+            </Link>
+            <Link href="/settings" className="flex items-center text-gray-700 hover:text-green-600">
+              <Settings className="h-5 w-5 mr-3" />
+              Settings
+            </Link>
+          </nav>
+        </aside>
 
         {/* Main Dashboard Content */}
         <main className="flex-1 p-8">
