@@ -39,10 +39,16 @@ export default function LandingPage() {
       </nav>
 
       {/* Enhanced Hero Section */}
-      <section className="relative overflow-hidden pt-16 pb-24 md:pt-24 md:pb-32 hero-gradient">
-      <video autoPlay loop muted playsInline style={{ width: '100%', height: 'auto', zIndex: 1 }}>
-       <source src="/0422.mp4" type="video/mp4" />
-        Your browser does not support the video tag.
+    <section className="relative overflow-hidden" style={{ height: '600px' }}>
+      <video
+        autoPlay
+        loop
+        muted
+        playsInline
+       className="absolute top-0 left-0 w-full h-full object-cover z-0 opacity-80"
+     >
+      <source src="/0422.mp4" type="video/mp4" />
+      Your browser does not support the video tag.
       </video>
         {/* Radial glow behind headline */}
         <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[120%] h-[120%] bg-accent/5 blur-[100px] rounded-full"></div>
