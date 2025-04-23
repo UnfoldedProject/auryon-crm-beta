@@ -38,61 +38,26 @@ export default function LandingPage() {
         </div>
       </nav>
 
-      {/* Enhanced Hero Section */}
-    <section className="relative overflow-hidden" style={{ height: '600px' }}>
-      <video
-        autoPlay
-        loop
-        muted
-        playsInline
-       className="absolute top-0 left-0 w-full h-full object-cover z-0 opacity-80"
-     >
-      <source src="/0422.mp4" type="video/mp4" />
-      Your browser does not support the video tag.
-      </video>
-        {/* Radial glow behind headline */}
-        <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[120%] h-[120%] bg-accent/5 blur-[100px] rounded-full"></div>
+      {/* Video Hero Section */}
+      <section className="relative overflow-hidden" style={{ height: "600px" }}>
+        <video autoPlay loop playsInline muted className="absolute top-0 left-0 w-full h-full object-cover z-0">
+          <source src="/auryon-welcome.mp4" type="video/mp4" />
+          Your browser does not support the video tag.
+        </video>
 
-        {/* Animated geometric shapes */}
-        <div className="absolute inset-0 overflow-hidden">
-          {/* Floating shapes */}
-          <div className="absolute top-20 left-10 md:left-20 h-16 w-16 rounded-xl bg-secondary/20 rotate-12 animate-float"></div>
-          <div className="absolute bottom-20 right-10 md:right-32 h-20 w-20 rounded-full bg-accent/20 animate-float-delay"></div>
-          <div className="absolute top-1/2 left-1/4 h-12 w-12 rounded-md bg-primary/10 -rotate-12 animate-pulse"></div>
-          <div className="absolute top-1/3 right-1/4 h-10 w-10 rounded-full border border-primary/20 animate-float-slow"></div>
-
-          {/* Additional geometric shapes */}
-          <div className="absolute top-1/4 right-1/3 h-14 w-14 rounded-lg bg-gradient-to-br from-secondary/10 to-accent/10 rotate-45 animate-float-reverse"></div>
-          <div className="absolute bottom-1/3 left-1/3 h-8 w-8 rounded-md bg-gradient-to-tr from-primary/10 to-accent/10 animate-pulse-slow"></div>
-          <div className="absolute top-2/3 right-1/5 h-6 w-6 rounded-sm border border-secondary/30 -rotate-12 animate-spin-slow"></div>
-
-          {/* Sparks */}
-          <div className="absolute top-1/4 left-1/2 h-2 w-2 rounded-full bg-accent animate-spark"></div>
-          <div className="absolute top-2/3 right-1/4 h-2 w-2 rounded-full bg-secondary animate-spark-delay"></div>
-          <div className="absolute bottom-1/4 left-1/3 h-2 w-2 rounded-full bg-primary/40 animate-spark-slow"></div>
-        </div>
-
-        <div className="container relative mx-auto px-6 md:px-12">
-          <div className="mx-auto max-w-4xl text-center">
-            <h1 className="mb-6 text-4xl font-bold tracking-tight text-primary md:text-5xl lg:text-6xl xl:text-7xl font-display">
-              Your CRM Should Work for You — Not the Other Way Around.
-            </h1>
-            <p className="mx-auto mb-10 max-w-2xl text-lg text-gray-600 md:text-xl">
-              Auryon is the AI-powered CRM that automates inefficiency, simplifies operations, and brings your sales
-              team back to doing what they do best: closing.
-            </p>
-            <Link
-              href="/forms/intake"
-              className="inline-flex items-center gap-2 rounded-md px-8 py-4 text-white text-lg font-medium transition-all hover:scale-105 cta-button"
-            >
-              Schedule My Walkthrough
-              <ArrowRight className="h-5 w-5" />
-            </Link>
-            <p className="mt-6 text-sm text-gray-600 max-w-2xl mx-auto">
-              Discover how our psychometric algorithm pre-qualifies your leads — so your reps never waste time on
-              mismatched prospects again.
-            </p>
-          </div>
+        <div className="relative z-10 flex flex-col justify-center items-center h-full text-center text-white px-6 md:px-12">
+          <h1 className="text-4xl md:text-5xl font-bold max-w-4xl font-display">
+            Your CRM Should Work for You — Not the Other Way Around.
+          </h1>
+          <p className="mt-4 text-lg md:text-xl max-w-2xl">
+            Automate inefficiency. Simplify operations. Close more deals.
+          </p>
+          <Link
+            href="/forms/intake"
+            className="mt-8 inline-block bg-green-800 hover:bg-green-700 text-white px-8 py-4 rounded-md text-lg font-semibold transition-all duration-300 hover:shadow-lg"
+          >
+            Schedule My Walkthrough
+          </Link>
         </div>
       </section>
 
