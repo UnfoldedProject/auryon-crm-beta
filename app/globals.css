@@ -64,6 +64,10 @@
     --input: 217.2 32.6% 17.5%;
     --ring: 212.7 26.8% 83.9%;
   }
+
+  html {
+    scroll-behavior: smooth;
+  }
 }
 
 @layer base {
@@ -108,6 +112,7 @@
 
   .cta-button:hover {
     box-shadow: 0 6px 20px rgba(0, 51, 32, 0.35), 0 0 15px rgba(110, 231, 183, 0.3);
+    transform: translateY(-2px);
   }
 }
 
@@ -158,6 +163,21 @@
   }
 }
 
+@keyframes blob {
+  0% {
+    transform: translate(0px, 0px) scale(1);
+  }
+  33% {
+    transform: translate(30px, -50px) scale(1.1);
+  }
+  66% {
+    transform: translate(-20px, 20px) scale(0.9);
+  }
+  100% {
+    transform: translate(0px, 0px) scale(1);
+  }
+}
+
 .animate-float-reverse {
   animation: float-reverse 7s ease-in-out infinite;
 }
@@ -180,4 +200,16 @@
 
 .animate-spark-slow {
   animation: spark 6s ease-in-out 2s infinite;
+}
+
+.animate-blob {
+  animation: blob 7s infinite;
+}
+
+.animation-delay-2000 {
+  animation-delay: 2s;
+}
+
+.animation-delay-4000 {
+  animation-delay: 4s;
 }
